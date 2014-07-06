@@ -79,7 +79,7 @@ exports.flagword = function(req, res) {
 
 	if (!flagEntryNum) {
 		return res.json({
-			err: "Missing flagEntryNum"
+			err: "Missing subject to flag"
 		});
 	}
 
