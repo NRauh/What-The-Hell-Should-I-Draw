@@ -1,26 +1,4 @@
-var mongoose = require("mongoose");
-var random = require("mongoose-random");
-var db = mongoose.connection;
-
-
-mongoose.connect("mongodb://localhost/subject");
-db.on("error", console.error.bind(console, "Error:"));
-db.once("open", function() {
-	console.log("Connected");
-});
-
-
-var subjectSchema = mongoose.Schema({
-	title: String,
-	flagCount: {
-		type: Number,
-		default: 0
-	},
-	entryNum: Number
-});
-
-var Subject = mongoose.model("Subject", subjectSchema);
-
+var Subject = require("./Subject").Subject;
 
 exports.getword = function(req, res) {
 	function randomNumber(min, max) {
@@ -91,6 +69,7 @@ exports.addword = function(req, res) {
 		});
 	}
 };
+
 
 
 
