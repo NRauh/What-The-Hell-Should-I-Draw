@@ -12,7 +12,8 @@ Want (and, preferably, know how) to contribute to the project? Here's some ideas
 	- Any helpful fixes to the Javascript/backend files
 * Remove punctuation at end of things people add if it exists
 * Remove unnecessary things from /getword json
-* "/" May eventually give some information about how to use the api 
+* "/" May eventually give some information about how to use the api
+* Implement a way to protect API requests 
 
 ## License
 
