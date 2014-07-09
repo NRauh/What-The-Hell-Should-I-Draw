@@ -38,6 +38,12 @@ exports.addword = function(req, res) {
 		});
 	}
 
+	if (newWord.length > 100) {
+		return res.json({
+			err: "Subject too long"
+		});
+	}
+
 	newWord = newWord.toLowerCase();
 
 	Subject.findOne({
