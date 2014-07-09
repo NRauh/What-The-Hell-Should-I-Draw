@@ -24,7 +24,9 @@ var WordController = require("./WordController");
 /***
 	Adding body-parser middleware
 ***/
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({
+	extended: true
+}));
 app.use(bodyParser.json());
 
 var allowCrossDomain = function(req, res, next) {
