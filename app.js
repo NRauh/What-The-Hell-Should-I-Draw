@@ -8,7 +8,7 @@ var bodyParser = require("body-parser");
 ***/
 var mongoose = require("mongoose");
 var db = mongoose.connection;
-mongoose.connect("mongodb://localhost/subject");
+mongoose.connect(process.env.MONGOLAB_URI || "mongodb://localhost/subject");
 db.on("error", console.error.bind(console, "Error:"));
 db.once("open", function() {
 	console.log("Connected");
