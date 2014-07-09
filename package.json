@@ -1,14 +1,20 @@
 {
   "name": "withsid",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Let a community and a computer tell you what to draw",
   "main": "app.js",
   "author": "Nate Rauh",
   "license": "MIT",
   "private": true,
+	"engines": {
+		"node": "0.10.x"
+	},
   "dependencies": {
     "express": "~4.4.5",
     "mongoose": "~3.8.12",
     "body-parser": "~1.4.3"
-  }
+  },
+	"scripts": {
+		"start": "node app.js"
+	}
 }
