@@ -40,6 +40,9 @@ app.use(allowCrossDomain);
 /***
 	Setting up routes
 ***/
+app.get("/", function(req, res) {
+	res.send("Hello");
+});
 app.get("/getword", WordController.getword);
 app.post("/addword", WordController.addword);
 app.post("/flagword", WordController.flagword);
