@@ -11,12 +11,13 @@ Want (and, preferably, know how) to contribute to the project? Here's some ideas
 * General
 	- Any helpful fixes to the Javascript/backend files
 * Remove punctuation at end of things people add if it exists
+* Remove unnecessary things from /getword json
 
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) [2014] [Nate Rauh]
+Copyright (c) 2014 Nate Rauh
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
