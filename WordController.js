@@ -83,17 +83,17 @@ exports.flagword = function(req, res) {
 	var flagEntryNum = parseInt(req.body.flagEntryNum);
 	var flagSubject = req.body.flagSubject;
 
-	if (!flagEntryNum) {
-		return res.json({
-			err: "Missing subject entry number"
-		});
-	}
-
 	if (!flagSubject) {
 		return res.json({
 			err: "Missing subject to flag"
 		});
 	}
+
+	if (!flagEntryNum) {
+		return res.json({
+			err: "Missing subject entry number"
+		});
+	}	
 
 	flagSubject = flagSubject.toLowerCase();
 
