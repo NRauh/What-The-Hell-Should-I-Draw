@@ -85,7 +85,7 @@ exports.flagword = function(req, res) {
 
 	if (!flagEntryNum) {
 		return res.json({
-			err: "Missing subject to flag"
+			err: "Missing subject entry number"
 		});
 	}
 
