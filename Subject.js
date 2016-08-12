@@ -1,13 +1,15 @@
 var mongoose = require("mongoose");
+var random = require("mongoose-simple-random");
 
 var subjectSchema = mongoose.Schema({
-	title: String,
+	subject: String,
 	flagCount: {
 		type: Number,
 		default: 0
 	},
-	entryNum: Number
 });
+
+subjectSchema.plugin(random);
 
 var Subject = mongoose.model("Subject", subjectSchema);
 
