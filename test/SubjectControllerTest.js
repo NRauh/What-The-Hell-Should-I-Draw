@@ -58,6 +58,7 @@ describe("getRandomSubject", () => {
 
 	it("gets a random entry", (done) => {
 		SubjectController.getRandomSubject((msg) => {
+			expect(msg.err).to.equal(undefined);
 			expect(msg.sub).to.exist;
 			done();
 		});
@@ -90,6 +91,21 @@ describe("flagSubject", () => {
 		Subject.findOne({subject: "person"}, (err, obj) => {
 			expect(obj.flagCount).to.equal(1);
 			done();
+		});
+	});
+
+	it("removes the subject on the 23 flag", (done) => {
+		Subject.findOneAndUpdate({
+			subject: "multiple people"
+		}, {
+			flagCount: 22
+		}, (err, obj) => {
+			SubjectController.flagSubject({subject: "multiple people"}, (msg) => {
+				Subject.findOne({subject: "multiple people"}, (err, obj) => {
+					expect(obj).to.equal(null);
+					done();
+				});
+			});
 		});
 	});
 });

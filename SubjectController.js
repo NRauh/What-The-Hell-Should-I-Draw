@@ -2,6 +2,12 @@ var Subject = require("./Subject").Subject;
 
 exports.getRandomSubject = function(cb) {
 	Subject.findOneRandom((err, sub) => {
+		if (err) {
+			return cb({
+				err: err
+			});
+		}
+
 		return cb({
 			sub: sub
 		});
@@ -65,7 +71,6 @@ exports.flagSubject = function(body, cb) {
 
 	flagSubject = flagSubject.toLowerCase();
 
-
 	Subject.findOne({subject: flagSubject}, (err, sub) => {
 		if (err) {
 			return cb({
@@ -79,20 +84,37 @@ exports.flagSubject = function(body, cb) {
 			});
 		}
 
-		Subject.update({
-			subject: flagSubject
-		}, {
-			flagCount: sub.flagCount + 1
-		}, (err, sub) => {
-			if (err) {
-				return cb({
-					err: err
-				});
-			}
+		if (sub.flagCount >= 22) {
+			Subject.remove({
+				subject: flagSubject
+			}, (err) => {
+				if (err) {
+					return cb({
+						err: err
+					});
+				}
 
-			return cb({
-				msg: "Subject flagged"
+				return cb({
+					msg: "Subject flagged"
+				});
 			});
-		});
+
+		} else {
+			Subject.update({
+				subject: flagSubject
+			}, {
+				flagCount: sub.flagCount + 1
+			}, (err, sub) => {
+				if (err) {
+					return cb({
+						err: err
+					});
+				}
+
+				return cb({
+					msg: "Subject flagged"
+				});
+			});
+		}
 	});
 };
