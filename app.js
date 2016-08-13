@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const exphbs = require("express-handlebars");
 const mongoose = require("mongoose");
 const SubjectController = require("./SubjectController");
 var db = mongoose.connection;
@@ -17,22 +18,28 @@ db.once("open", () => {
 
 
 /***
-	Adding body-parser middleware
+	Configuring app
 ***/
+// Adding body-parser
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+// creating public dir
+app.use(express.static("public"));
 
 
 /***
 	Setting up routes
 ***/
 app.get("/", (req, res) => {
-	res.send("Hello");
+	return res.sendfile("public/index.html");
 });
 
 app.get("/api/getsubject", (req, res) => {
 	SubjectController.getRandomSubject((msg) => {
-			return res.json(msg);
+			return res.json({
+				sub: msg.sub.subject,
+				err: msg.err
+			});
 	});
 });
 

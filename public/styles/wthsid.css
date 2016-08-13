@@ -1,0 +1,214 @@
+@import url(cabin/stylesheet.css);
+.pure-g [class*="pure-u"] {
+  font-family: "cabin", Helvetica, sans-serif; }
+  .pure-g [class*="pure-u"] input {
+    box-shadow: none; }
+
+a {
+  color: #2497D8; }
+
+#container {
+  max-width: 960px;
+  margin: 0 auto;
+  margin-bottom: 5em; }
+
+#main-bits {
+  margin: 0 auto;
+  margin-top: 1.25em;
+  text-align: center;
+  color: #919191; }
+  #main-bits > h1 {
+    margin-bottom: 0.625em;
+    font-size: 2.15em;
+    font-weight: normal; }
+  #main-bits h2 {
+    margin-top: 0.625em;
+    margin-bottom: 0.625em;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: normal; }
+  #main-bits .giant h1 {
+    text-transform: capitalize;
+    color: black; }
+
+.news {
+  margin: 3px auto; }
+
+#options {
+  margin: 0 auto;
+  margin-top: 3em; }
+
+#top {
+  margin-bottom: 1.625em;
+  width: 100%;
+  overflow: hidden; }
+  #top button {
+    width: 48.46154%;
+    font-size: 2em;
+    float: left; }
+  #top button:first-of-type {
+    margin-right: 1.43229%;
+    background-color: #D83F31; }
+    #top button:first-of-type:hover {
+      background-color: #db4f42; }
+    #top button:first-of-type:active {
+      background-color: #ce3527; }
+  #top button:last-of-type {
+    margin-left: 1.43229%;
+    background-color: #09E945; }
+    #top button:last-of-type:hover {
+      background-color: #11f64e; }
+    #top button:last-of-type:active {
+      background-color: #08d53f; }
+
+#bottom {
+  width: 100%;
+  overflow: hidden; }
+  #bottom button {
+    width: 28.25521%;
+    margin-left: 3.77604%;
+    margin-right: 3.77604%;
+    font-size: 1.3126em;
+    float: left; }
+  #bottom button:first-of-type {
+    margin-left: 0; }
+  #bottom button:last-of-type {
+    margin-right: 0; }
+
+#hell-yeah em {
+  text-transform: Capitalize; }
+
+.slide {
+  margin: 0 auto;
+  display: none; }
+  .slide h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.625em; }
+    .slide h3:first-of-type {
+      margin-top: 0; }
+  .slide p {
+    margin-top: 0;
+    margin-left: 0.625em;
+    margin-bottom: 0.2em;
+    font-size: 1.25em; }
+  .slide ul {
+    margin-left: 0;
+    margin-top: 0.2em;
+    list-style: none; }
+    .slide ul li {
+      line-height: 1.625em;
+      font-size: 1.25em; }
+      .slide ul li:before {
+        content: "- "; }
+  .slide form {
+    margin-top: 1.5em;
+    margin-left: 1.9em; }
+
+.pure-button:hover {
+  background-image: none; }
+
+.button-primary {
+  padding: 0.5em 2.08333%;
+  background-color: #7091AA;
+  color: #191919; }
+  .button-primary:hover {
+    background-color: #86a2b7; }
+  .button-primary:active {
+    background-color: #6085a0; }
+
+.button-secondary {
+  background-color: #54A6E2;
+  color: #F3F3F3; }
+  .button-secondary:hover {
+    background-color: #61ade4; }
+  .button-secondary:active {
+    background-color: #3a98de; }
+
+#footer {
+  padding: 0.7em;
+  padding-right: 20%;
+  text-align: right;
+  font-size: 0.8125em; }
+
+.giant h1 {
+  font-size: 4.5em;
+  margin-top: 0.625em;
+  margin-bottom: 0.625em; }
+
+.news * {
+  padding: 0.9375em;
+  margin: 0; }
+
+.bad-news {
+  background-color: #DB4040; }
+  .bad-news:hover {
+    background-color: #de5151; }
+  .bad-news:active {
+    background-color: #d82f2f; }
+
+.good-news {
+  background-color: #26DF20; }
+  .good-news:hover {
+    background-color: #3ce236; }
+  .good-news:active {
+    background-color: #23cd1d; }
+
+.modal {
+  position: fixed;
+  display: none;
+  z-index: 100;
+  top: 28%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: #FCFCFC;
+  -moz-box-shadow: 4px 5px 22px -6px #000;
+  -webkit-box-shadow: 4px 5px 22px -6px #000;
+  box-shadow: 4px 5px 22px -6px #000; }
+  .modal .modal-content {
+    padding: 1em;
+    border-bottom: solid 1px #CCC; }
+  .modal .modal-footer {
+    float: right;
+    padding: 0.625em; }
+
+.modal-shadow {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background-color: #F5F5F5;
+  opacity: 0.5;
+  filter: alpha(opacity=50); }
+
+.slide {
+  margin-top: 1.875em;
+  background-color: #E7E7E7; }
+  .slide .slide-box {
+    margin: 0;
+    padding: 1.25em; }
+
+@media all and (max-width: 810px) {
+  #options {
+    width: 97%; }
+
+  .slide {
+    width: 90%; }
+
+  #footer {
+    padding-right: 2%; } }
+@media all and (max-width: 630px) {
+  html {
+    font-size: 14px; }
+
+  #options #bottom > a {
+    display: block;
+    float: none;
+    width: 100%;
+    margin: 0;
+    margin-top: 3px; } }
+@media all and (max-width: 500px) {
+  html {
+    font-size: 12px; } }
+
+/*# sourceMappingURL=wthsid.css.map */

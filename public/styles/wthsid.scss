@@ -1,0 +1,301 @@
+@import "cabin/stylesheet.css";
+
+$subColor: #919191;
+$anchorColor: #1A95F5;
+$noColor: #D83F31;
+$yesColor: #09E945;
+$primaryButtonColor: #7091AA;
+$secondaryButtonColor: #54A6E2;
+$buttonFontColor: #191919;
+$secondaryButtonFontColor: #F3F3F3;
+
+.pure-g [class *= "pure-u"] {
+	font-family: "cabin", Helvetica, sans-serif;
+	input {
+		box-shadow: none;
+	}
+}
+a {
+	color: #2497D8;
+}
+#container {
+	max-width: 960px;
+	margin: 0 auto;
+	margin-bottom: 5em;
+}
+#main-bits {
+	margin: 0 auto;
+	margin-top: 1.25em;
+	text-align: center;
+	color: $subColor;
+	> h1 {
+		margin-bottom: 0.625em;
+		font-size: 2.15em;
+		font-weight: normal;
+	}
+	h2 {
+		margin-top: 0.625em;
+		margin-bottom: 0.625em;
+		font-size: 1.5em;
+		font-style: italic;
+		font-weight: normal;
+	}
+	.giant {
+		h1 {
+			text-transform: capitalize;
+			color: black;
+		}
+	}
+}
+.news {
+	margin: 3px auto;
+}
+#options {
+	margin: 0 auto;
+	margin-top: 3em;
+}
+
+
+
+#top {
+	margin-bottom: 1.625em;
+	width: 100%;
+	overflow: hidden;
+	button {
+		width: percentage(378/780);
+		font-size: 2em;
+		float: left;
+	}
+	button:first-of-type {
+		margin-right: percentage(11/768);
+		background-color: $noColor;
+		&:hover {
+			background-color: lighten($noColor, 4);
+		}
+		&:active {
+			background-color: darken($noColor, 4);
+		}
+	}
+	button:last-of-type {
+		margin-left: percentage(11/768);
+		background-color: $yesColor;
+		&:hover {
+			background-color: lighten($yesColor, 4);
+		}
+		&:active {
+			background-color: darken($yesColor, 4);
+		}
+	}
+}
+#bottom {
+	width: 100%;
+	overflow: hidden;
+	button {
+		width: percentage(217/768);
+		margin-left: percentage(29/768);
+		margin-right: percentage(29/768);
+		font-size: 1.3126em;
+		float: left;
+	}
+	button:first-of-type {
+		margin-left: 0;
+	}
+	button:last-of-type {
+		margin-right: 0;
+	}
+}
+
+#hell-yeah {
+	em {
+		text-transform: Capitalize;
+	}
+}
+
+.slide {
+	margin: 0 auto;
+	display: none;
+	h3 {
+		font-size: 1.5em;
+		margin-bottom: 0.625em;
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
+
+	p {
+		margin-top: 0;
+		margin-left: 0.625em;
+		margin-bottom: 0.2em;
+		font-size: 1.25em;
+	}
+	ul {
+		margin-left: 0;
+		margin-top: 0.2em;
+		list-style: none;
+		li {
+			line-height: 1.625em;
+			font-size: 1.25em;
+			&:before {
+				content: "- ";
+			}
+		}
+	}
+	form {
+		margin-top: 1.5em;
+		margin-left: 1.9em;
+	}
+}
+
+.pure-button {
+	&:hover {
+		background-image: none;
+	}
+}
+.button-primary {
+	padding: 0.5em percentage(16/768);
+	background-color: $primaryButtonColor;
+	color: $buttonFontColor;
+	&:hover {
+		background-color: lighten($primaryButtonColor, 7);
+	}
+	&:active {
+		background-color: darken($primaryButtonColor, 5);
+	}
+}
+.button-secondary {
+	background-color: $secondaryButtonColor;
+	color: $secondaryButtonFontColor;
+	&:hover {
+		background-color: lighten($secondaryButtonColor, 3);
+	}
+	&:active {
+		background-color: darken($secondaryButtonColor, 6);
+	}
+}
+
+#footer {
+	padding: 0.7em;
+	padding-right: 20%;
+	text-align: right;
+	font-size: 0.8125em;
+}
+
+
+
+///////
+$bad-news-bg: #DB4040;
+$good-news-bg: #26DF20;
+$modal-bg: #FCFCFC;
+$modal-shadow: #000;
+$modal-border: #CCC;
+$modal-backdrop: #F5F5F5;
+$slide-bg: #E7E7E7;
+
+.giant {
+	h1 {
+		font-size: 4.5em;
+		margin-top: 0.625em;
+		margin-bottom: 0.625em;
+	}
+}
+
+.news {
+	* {
+		padding: 0.9375em;
+		margin: 0;
+	}
+}
+.bad-news {
+	background-color: $bad-news-bg;
+	&:hover {
+		background-color: lighten($bad-news-bg, 4);
+	}
+	&:active {
+		background-color: darken($bad-news-bg, 4);
+	}
+}
+.good-news {
+	background-color: $good-news-bg;
+	&:hover {
+		background-color: lighten($good-news-bg, 5);
+	}
+	&:active {
+		background-color: darken($good-news-bg, 4);
+	}
+}
+
+.modal {
+	position: fixed;
+	display: none;
+	z-index: 100;
+	top: 28%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background-color: $modal-bg;
+	// can / should these be in ems?
+	-moz-box-shadow: 4px 5px 22px -6px $modal-shadow;
+	-webkit-box-shadow: 4px 5px 22px -6px $modal-shadow;
+	box-shadow: 4px 5px 22px -6px $modal-shadow;
+	.modal-content {
+		padding: 1em;
+		border-bottom: solid 1px $modal-border;
+	}
+	.modal-footer {
+		float: right;
+		padding: 0.625em;
+	}
+}
+.modal-shadow {
+	position: fixed;
+	z-index: 99;
+	width: 100%;
+	height: 100%;
+	background-color: $modal-backdrop;
+	//Come up with a way to make these variables
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+.slide {
+	margin-top: 1.875em;
+	background-color: $slide-bg;
+	.slide-box {
+		margin: 0;
+		padding: 1.25em;
+	}
+}
+
+
+
+@media all and (max-width: 810px) {
+	#options {
+		width: 97%;
+	}
+	.slide {
+		width: 90%;
+	}
+	#footer {
+		padding-right: 2%;
+	}
+}
+@media all and (max-width: 630px) {
+	html {
+		font-size: 14px;
+	}
+	#options {
+		#bottom {
+			> a {
+				display: block;
+				float: none;
+				width: 100%;
+				margin: 0;
+				margin-top: 3px;
+			}
+		}
+	}
+}
+@media all and (max-width: 500px) {
+	html {
+		font-size: 12px;
+	}
+}

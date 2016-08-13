@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="What the Hell Should I Draw? Let a computer and community tell you">
+	<title>What the Hell Should I Draw?</title>
+
+	<!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="/styles/pure/pure-min.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="/styles/wthsid.css" media="all" />
+
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"
+			  integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+			  crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="container" class="pure-g">
+		<div id="main-bits" class="pure-u-1">
+			<h1>What the Hell Should I Draw?</h1>
+			<h2>You should draw...</h2>
+			<div class="giant">
+				<h1 id="subject"></h1>
+			</div>
+		</div>
+
+
+		<div id="messages">
+		</div>
+
+
+		<div id="options" class="pure-u-1">
+			<div id="top">
+				<button class="pure-button button-primary" id="hell-no">Hell No!</button>
+				<button class="pure-button button-primary" id="hell-yeah">Hell Yeah!</button>
+			</div>
+
+			<div id="bottom">
+				<button class="pure-button button-primary">Need Inspiration?</button>
+				<button class="pure-button button-primary">Add Topic</button>
+				<button class="pure-button button-primary">Flag Topic</button>
+			</div>
+		</div>
+
+
+		<div id="modal" class="modal pure-u-18-24">
+			<div class="modal-content">
+				<p>Awesome! Why don't you tell your friends you'll be drawing <em></em>?</p>
+				<!-- sharing stuff -->
+
+			</div>
+			<div class="modal-footer">
+				<button class="pure-button button-secondary">Close</button>
+			</div>
+		</div>
+
+
+		<div id="inspiration" class="slide pure-u-1">
+			<div class="slide-box">
+				<h3>Want inspiration? Have no idea what  looks like?</h3>
+				<p>Here's some liks to get an idea</p>
+				<p>[Links aren't checked and clicking them could be regretable]</p>
+				<ul>
+					<li><a href="https://www.google.com/search?tbm=isch&amp;q=" target="_blank">Google Images</a></li>
+					<li><a href="https://www.bing.com/images/search?q=" target="_blank">Bing Images</a></li>
+					<li><a href="https://secure.flickr.com/search/?q=" target="_blank">Flickr</a></li>
+					<li><a href="http://www.deviantart.com/?q=" target="_blank">DiviantArt</a></li>
+					<li><a href="http://www.picsearch.com/index.cgi?q=" target="_blank">PicSearch</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="add-subject" class="slide pure-u-1">
+			<div class="slide-box">
+				<h3>Add something for others to draw</h3>
+				<p>Make sure it follows these rules</p>
+				<ul>
+					<li>Is 100 characters or less</li>
+					<li>Is not a pronoun</li>
+					<li>Is not personal to anyone</li>
+					<li>Is not reference that only you and your friends will understand</li>
+					<li>Is safe for work (this is a bit flexible)</li>
+					<li>Is something that others will actually be able to draw</li>
+					<li>Fits into the sentence, "you should draw..."</li>
+				</ul>
+
+				<form class="pure-form" id="new-subject-form">
+					<fieldset>
+						<input type="text" name="add-subject" maxlength="100" placeholder="Add Subject" />
+						<input class="pure-button button-secondary" type="submit" value="Submit" />
+					</fieldset>
+				</form>
+			</div>
+		</div>
+
+		<div id="flag-subject" class="slide pure-u-1">
+			<div class="slide-box">
+				<h3>Please only flag things that deserve it</h3>
+				<ul>
+					<li>Things very NSFW</li>
+					<li>Offensive things</li>
+					<li>Something personal to someone</li>
+					<li>Things that aren't able to be drawn (e.g. 'I love my girlfriend')</li>
+					<li>Unknown pronouns</li>
+					<li>Nonsensical things</li>
+					<li>Links to things</li>
+				</ul>
+				<h3>Don't flag things because</h3>
+				<ul>
+					<li>You don't think it's good</li>
+					<li>You can't draw it</li>
+					<li>You keep seeing it (instead, add something new)</li>
+				</ul>
+
+				<form class="pure-form" id="flag-subject-form">
+					<fieldset>
+						<input type="text" name="flag-subject" maxlength="100" placeholder="Type word to flag" />
+						<input class="pure-button pure-button-disabled button-secondary" type="submit" value="Flag" disabled="true" />
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="footer">
+		<a href="https://www.github.com/nrauh/What-The-Hell-Should-I-Draw">Find out more on GitHub</a>
+	</div>
+
+
+	<script type="text/javascript" src="/js/app.js"></script>
+</body>
+</html>
