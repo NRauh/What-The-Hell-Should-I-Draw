@@ -10,15 +10,18 @@
     "node": "5.2.x"
   },
   "dependencies": {
-    "body-parser": "~1.15.2",
-    "express": "~4.14.0",
-    "mongoose": "~4.5.8",
-    "mongoose-simple-random": "^0.3.3"
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.3",
+    "mongoose-simple-random": "^0.4.1"
   },
   "scripts": {
-    "start": "node app.js --harmony"
+    "start": "node app.js",
+    "test": "mocha"
   },
   "devDependencies": {
-    "chai": "^3.5.0"
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2",
+    "sinon": "^2.3.8"
   }
 }

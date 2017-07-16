@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const Subject = require("./Subject");
 const SubjectController = require("./SubjectController");
 var db = mongoose.connection;
 var app = express();
@@ -9,7 +10,9 @@ var app = express();
 /***
 	Connecting to database
 ***/
-mongoose.connect(process.env.MONGOLAB_URI || "mongodb://localhost/subject");
+mongoose.connect(process.env.MONGOLAB_URI || "mongodb://localhost/subject", {
+	useMongoClient: true
+});
 db.on("error", console.error.bind(console, "Error:"));
 db.once("open", () => {
 	console.log("Connected");
@@ -29,12 +32,14 @@ app.use(express.static("public"));
 /***
 	Setting up routes
 ***/
+var subController = new SubjectController(Subject);
+
 app.get("/", (req, res) => {
 	return res.sendfile("public/index.html");
 });
 
 app.get("/api/getsubject", (req, res) => {
-	SubjectController.getRandomSubject((msg) => {
+	subController.getRandomSubject((msg) => {
 			return res.json({
 				sub: msg.sub.subject,
 				err: msg.err
@@ -43,13 +48,13 @@ app.get("/api/getsubject", (req, res) => {
 });
 
 app.post("/api/addsubject", (req, res) => {
-	SubjectController.addSubject(req.body, (msg) => {
+	subController.addSubject(req.body, (msg) => {
 		return res.json(msg);
 	});
 });
 
 app.post("/api/flagsubject", (req, res) => {
-	SubjectController.flagSubject(req.body, (msg) => {
+	subController.flagSubject(req.body, (msg) => {
 		return res.json(msg);
 	});
 });
