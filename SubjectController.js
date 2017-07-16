@@ -1,5 +1,3 @@
-//var Subject = require("./Subject").Subject;
-
 class SubjectController {
 
 	constructor(subject) {
