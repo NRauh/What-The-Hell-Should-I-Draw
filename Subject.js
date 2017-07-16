@@ -13,4 +13,4 @@ subjectSchema.plugin(random);
 
 var Subject = mongoose.model("Subject", subjectSchema);
 
-exports.Subject = Subject;
+module.exports = Subject;
