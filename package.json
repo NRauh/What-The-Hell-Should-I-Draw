@@ -17,7 +17,8 @@
   },
   "scripts": {
     "start": "node app.js",
-    "test": "mocha"
+    "test": "mocha",
+    "pretty": "js-beautify -r -f *.js --config=pretty.json"
   },
   "devDependencies": {
     "chai": "^4.1.0",

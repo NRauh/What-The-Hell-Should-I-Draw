@@ -1,5 +1,7 @@
 # What the Hell Should I Draw
 
+[![Build Status](https://travis-ci.org/NRauh/What-The-Hell-Should-I-Draw.svg?branch=master)](https://travis-ci.org/NRauh/What-The-Hell-Should-I-Draw)
+
 Let a community and a computer tell you what to draw!
 
 Hacked together by [Nate Rauh](https://www.twitter.com/natethepirate).
